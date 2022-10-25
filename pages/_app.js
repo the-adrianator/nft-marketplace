@@ -5,7 +5,7 @@ import { Navbar, Footer } from '../components';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => (
-  <ThemeProvider atribute="class">
+  <ThemeProvider attribute="class">
     <div className="dark:bg-nft-dark dark:text-white bg-white text-black min-h-screen">
       <Navbar />
       <Component {...pageProps} />
