@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [dedicatedEndPoint, 'nft-bucket.infura-ipfs.io'],
+    domains: ['nft-bucket.infura-ipfs.io'],
   },
   // env: {
   //   BASE_URL: process.env.BASE_URL,
