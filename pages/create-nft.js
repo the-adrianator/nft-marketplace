@@ -9,16 +9,15 @@ import images from '../assets';
 import { NFTContext } from '../context/NFTContext';
 
 const CreateNFT = () => {
-  const { uploadToIPFS } = useContext(NFTContext);
+  const { uploadToIPFS, createNFT } = useContext(NFTContext);
   const [fileUrl, setFileUrl] = useState(null);
   const [formInput, setFormInput] = useState({ price: '', name: '', description: '' });
   const { theme } = useTheme();
+  const router = useRouter();
 
   const onDrop = useCallback(async (acceptedFile) => {
     // upload image to the ipfs
     const url = await uploadToIPFS(acceptedFile[0]);
-
-    console.log({ url });
 
     setFileUrl(url);
   }, []);
@@ -97,7 +96,7 @@ const CreateNFT = () => {
           <Button
             btnName="Create NFT"
             classStyles="rounded-xl"
-            handleClick={() => {}}
+            handleClick={() => createNFT(formInput, fileUrl, router)}
           />
         </div>
       </div>
