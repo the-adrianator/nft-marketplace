@@ -11,7 +11,7 @@ const MyNFTs = () => {
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [activeSelect, setActiveSelect] = useState('Recently Added');
+  const [activeSelect, setActiveSelect] = useState('Recently added');
 
   const onHandleSearch = (value) => {
     const filteredNFTs = nfts.filter(({ name }) => name.toLowerCase().includes(value.toLowerCase()));

@@ -32,14 +32,14 @@ const SearchBar = ({ activeSelect, setActiveSelect, handleSearch, clearSearch })
         <Image src={images.search} objectFit="contain" width={20} height={20} alt="search" className={theme === 'light' && 'filter invert'} />
         <input
           type="text"
-          placeholder="Search NFT"
+          placeholder="Search NFT..."
           className="dark:bg-nft-black-2 bg-white mx-4 w-full dark:text-white text-nft-black-1 font-normal text-xs outline-none"
           onChange={(e) => setDebouncedSearch(e.target.value)}
           value={debouncedSearch}
         />
       </div>
       <div onClick={() => setToggle((prevToggle) => !prevToggle)} className="relative flexBetween ml-4 sm:ml-0 sm:mt-2 min-w-190 cursor-pointer dark:bg-nft-black-2 bg-white border dark:border-nft-black-2 border-nft-gray-2 px-4 py-2 rounded-md">
-        <p className="font-poppins dark:text-white text-nft-black-1 font-normal text-xs">Recently Added</p>
+        <p className="font-poppins dark:text-white text-nft-black-1 font-normal text-xs">{activeSelect}</p>
         <Image
           src={images.arrow}
           objectFit="contain"
