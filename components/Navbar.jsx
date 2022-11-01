@@ -126,6 +126,7 @@ const Navbar = () => {
           <div className="ml-4">
             <ButtonGroup
               setActive={setActive}
+              setIsOpen={setIsOpen}
               router={router}
             />
           </div>
